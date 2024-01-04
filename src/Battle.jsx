@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 
 const Card = ({ cardId, onDelete }) => {
-  const [name, setName] = useState(localStorage.getItem(`name_${cardId}`) || "");
-  const [initiative, setInitiative] = useState(localStorage.getItem(`initiative_${cardId}`) || "");
+  const [name, setName] = useState(JSON.parse(localStorage.getItem(`name_${cardId}`)) || "");
+  const [initiative, setInitiative] = useState(JSON.parse(localStorage.getItem(`initiative_${cardId}`)) || "");
   const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem(`name_${cardId}`, name);
-    localStorage.setItem(`initiative_${cardId}`, initiative);
+    localStorage.setItem(`name_${cardId}`, JSON.stringify(name));
+    localStorage.setItem(`initiative_${cardId}`, JSON.stringify(initiative));
   }, [name, initiative, cardId]);
 
   const handleSave = () => {
