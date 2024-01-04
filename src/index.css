@@ -31,3 +31,38 @@ margin-top: 5px;
 width: 70px;
 height: 70px;
 }
+
+/* Battle page */
+#battle-wrapper {
+  justify-content: center;
+}
+
+.block {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 50px;
+  background-color: rgb(171, 171, 168);
+  border-radius: 20px;
+}
+
+textarea:focus, input:focus {
+  padding-left: 5px;
+  outline: none;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.input-wrapper {
+  height: 30px;
+}
+
+.name-input {
+  margin-right: 10%;
+  margin-top: 7px;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  padding-left: 5px;
+}
